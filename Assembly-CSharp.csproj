@@ -52,7 +52,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ClickEvent.cs" />
+     <Compile Include="Assets\Scripts\ItemController.cs" />
      <Compile Include="Assets\Scripts\UpgradeController.cs" />
+     <Compile Include="Assets\Scripts\woodPerSec.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/SRC/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
