@@ -141,12 +141,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1826957550}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -4, y: -61.960632}
-  m_SizeDelta: {x: 160, y: 45}
+  m_AnchoredPosition: {x: 0.32, y: -61.960632}
+  m_SizeDelta: {x: 200, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &107607432
 MonoBehaviour:
@@ -198,8 +198,9 @@ GameObject:
   - component: {fileID: 623755119}
   - component: {fileID: 623755118}
   - component: {fileID: 623755117}
+  - component: {fileID: 623755120}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Upgrade1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -262,7 +263,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 623755118}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 623755120}
+        m_MethodName: PurchasedUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &623755118
@@ -298,6 +310,113 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 623755115}
+--- !u!114 &623755120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 623755115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f293ce1c75e34714c9501af9d779a84d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click: {fileID: 671143212}
+  itemInfo: {fileID: 1765387703}
+  cost: 10
+  count: 0
+  clickPower: 1
+  itemName: Item1
+--- !u!1 &639460411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 639460412}
+  - component: {fileID: 639460415}
+  - component: {fileID: 639460414}
+  - component: {fileID: 639460413}
+  m_Layer: 5
+  m_Name: cuttingPower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &639460412
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 639460411}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1826957550}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -98.3, y: -33.92}
+  m_SizeDelta: {x: 173.61, y: 35.83}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &639460413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 639460411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e8239a1f7fd2a4698c4ecbd2272f4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cuttingPower: {fileID: 0}
+  woodText: {fileID: 0}
+  wood: 0
+  woodclick: 1
+--- !u!114 &639460414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 639460411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Choping Power: 1'
+--- !u!222 &639460415
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 639460411}
 --- !u!1 &670774350
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +522,7 @@ RectTransform:
   m_Children:
   - {fileID: 956501258}
   m_Father: {fileID: 1826957550}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -421,6 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e8239a1f7fd2a4698c4ecbd2272f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cuttingPower: {fileID: 639460414}
   woodText: {fileID: 107607432}
   wood: 0
   woodclick: 1
@@ -520,8 +640,9 @@ GameObject:
   - component: {fileID: 876468006}
   - component: {fileID: 876468005}
   - component: {fileID: 876468004}
+  - component: {fileID: 876468007}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Upgrade3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -584,7 +705,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 876468005}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 876468007}
+        m_MethodName: PurchasedUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &876468005
@@ -620,6 +752,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 876468002}
+--- !u!114 &876468007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876468002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f293ce1c75e34714c9501af9d779a84d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click: {fileID: 671143212}
+  itemInfo: {fileID: 670774352}
+  cost: 500
+  count: 0
+  clickPower: 50
+  itemName: Item3
 --- !u!1 &956501257
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,8 +854,9 @@ GameObject:
   - component: {fileID: 1051723629}
   - component: {fileID: 1051723628}
   - component: {fileID: 1051723627}
+  - component: {fileID: 1051723630}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Upgrade2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -769,7 +919,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1051723628}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1051723630}
+        m_MethodName: PurchasedUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1051723628
@@ -805,6 +966,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1051723625}
+--- !u!114 &1051723630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1051723625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f293ce1c75e34714c9501af9d779a84d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click: {fileID: 671143212}
+  itemInfo: {fileID: 2081351396}
+  cost: 25
+  count: 0
+  clickPower: 2
+  itemName: Item2
 --- !u!1 &1765387701
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,11 +1142,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 671143211}
   - {fileID: 107607431}
+  - {fileID: 671143211}
   - {fileID: 623755116}
   - {fileID: 1051723626}
   - {fileID: 876468003}
+  - {fileID: 639460412}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
